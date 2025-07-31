@@ -1,0 +1,17 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomColumnsOverride
+metadata:
+  name: projects.v1alpha1.in-cloud.io
+spec:
+  additionalPrinterColumns:
+    - jsonPath: .metadata.name
+      name: Name
+      type: string
+    - jsonPath: .status.conditions[?(@.type=="Ready")].status
+      name: Ready
+      type: Boolean
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+  id: default-/in-cloud.io/v1alpha1/projects

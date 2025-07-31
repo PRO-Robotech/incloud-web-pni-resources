@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: List
+metadata:
+items:
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: Breadcrumb
+    metadata:
+      name: stock-cluster-crd-table
+    spec:
+      id: "stock-cluster-crd-table"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: In-Cloud
+        link: "/openapi-ui"
+      - key: clusterList
+        label: "Cluster List"
+        link: "/openapi-ui/clusters"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: crds
+        label: "{typeName}"
+
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: Breadcrumb
+    metadata:
+      name: stock-cluster-crd-form
+    spec:
+      id: "stock-cluster-crd-form"
+      breadcrumbItems:
+      - key: in-cloud
+        label: In-Cloud
+        link: "/openapi-ui"
+      - key: clusterList
+        label: "Cluster List"
+        link: "/openapi-ui/clusters"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: create-crd-res-typename
+        label: Create
+
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: Breadcrumb
+    metadata:
+      name: stock-cluster-crd-form-edit
+    spec:
+      id: "stock-cluster-crd-form-edit"
+      breadcrumbItems:
+      - key: in-cloud
+        label: In-Cloud
+        link: "/openapi-ui"
+      - key: clusterList
+        label: "Cluster List"
+        link: "/openapi-ui/clusters"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: create-crd-res-typename
+        label: Update {entryName}

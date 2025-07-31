@@ -1,0 +1,11 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: TableUriMapping
+metadata:
+  name: "{{ .Values.projectResource.apiGroup }}.{{ .Values.projectResource.apiVersion }}.{{ .Values.projectResource.resourceName }}"
+spec:
+  keysToParse:
+  - metadata
+  - name
+  id: "default-/{{ .Values.projectResource.apiGroup }}/{{ .Values.projectResource.apiVersion }}/{{ .Values.projectResource.resourceName }}"
+  pathToNavigate: "/openapi-ui/{clusterName}/~recordValue~/api-table/in-cloud.io/v1alpha1/instances"

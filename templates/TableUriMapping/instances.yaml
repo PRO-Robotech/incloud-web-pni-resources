@@ -1,0 +1,11 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: TableUriMapping
+metadata:
+  name: "{{ .Values.instanceResource.apiGroup }}.{{ .Values.instanceResource.apiVersion }}.{{ .Values.instanceResource.resourceName }}"
+spec:
+  keysToParse:
+  - metadata
+  - name
+  id: "default-/{{ .Values.instanceResource.apiGroup }}/{{ .Values.instanceResource.apiVersion }}/{{ .Values.instanceResource.resourceName }}"
+  pathToNavigate: "/openapi-ui/{clusterName}/{namespace}-~recordValue~/{namespace}/non-crd-table/apps/v1/deployments"

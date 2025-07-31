@@ -1,0 +1,26 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomColumnsOverride
+metadata:
+  name: apps.v1.deployments
+spec:
+  additionalPrinterColumns:
+  - jsonPath: .metadata.name
+    name: Name
+    type: string
+  - jsonPath: .spec.replicas
+    name: Replicas
+    type: integer
+  - jsonPath: .status.unavailableReplicas
+    name: Unavailable Replicas
+    type: integer
+  - jsonPath: .status.conditions[?(@.type=="Available")].message
+    name: Available Message
+    type: String
+  - jsonPath: .status.conditions[?(@.type=="Available")].status
+    name: Available
+    type: Boolean
+  - jsonPath: .metadata.creationTimestamp
+    name: Age
+    type: date
+  id: default-/apps/v1/deployments

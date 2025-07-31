@@ -1,0 +1,29 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomColumnsOverride
+metadata:
+  name: v1.events
+spec:
+  additionalPrinterColumns:
+  - jsonPath: .type
+    name: Type
+    type: string
+  - jsonPath: .reason
+    name: Reason
+    type: string
+  - jsonPath: .involvedObject.kind
+    name: Object kind
+    type: string
+  - jsonPath: .involvedObject.name
+    name: Object name
+    type: string
+  - jsonPath: .firstTimestamp
+    name: First event time
+    type: string
+  - jsonPath: .lastTimestamp
+    name: Last event time
+    type: string
+  - jsonPath: .message
+    name: Message
+    type: string
+  id: default-/v1/events

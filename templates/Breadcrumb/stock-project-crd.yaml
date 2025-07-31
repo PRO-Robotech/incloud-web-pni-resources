@@ -1,0 +1,57 @@
+---
+apiVersion: v1
+kind: List
+metadata:
+items:
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: Breadcrumb
+    metadata:
+      name: stock-project-crd-table
+    spec:
+      id: "stock-project-crd-table"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: In-Cloud
+        link: "/openapi-ui"
+      - key: clusterList
+        label: "Cluster List"
+        link: "/openapi-ui/clusters"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: projects
+        label: "Projects"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: project
+        label: "{namespace}"
+        link: "/openapi-ui/clusters/{clusterName}/projects/{namespace}"
+      - key: crd
+        label: "{crdName}"
+
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: Breadcrumb
+    metadata:
+      name: stock-project-crd-form
+    spec:
+      id: "stock-project-crd-form"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: In-Cloud
+        link: "/openapi-ui"
+      - key: clusterList
+        label: "Cluster List"
+        link: "/openapi-ui/clusters"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: projects
+        label: "Projects"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: project
+        label: "{namespace}"
+        link: "/openapi-ui/clusters/{clusterName}/projects/{namespace}"
+      - key: create-crd-res-namespaced-table
+        label: "{typeName}"
+        link: "/openapi-ui/{clusterName}/{namespace}/crd-table/{apiGroup}/{apiVersion}/v1/{typeName}.{apiGroup}"
+      - key: create-crd-res-namespaced-typename
+        label: Create

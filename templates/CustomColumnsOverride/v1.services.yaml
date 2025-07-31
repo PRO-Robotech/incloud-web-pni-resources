@@ -1,0 +1,23 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomColumnsOverride
+metadata:
+  name: v1.services
+spec:
+  additionalPrinterColumns:
+  - jsonPath: .metadata.name
+    name: Name
+    type: string
+  - jsonPath: .status.loadBalancer.ingress[0].ip
+    name: LoadBalancer IP
+    type: string
+  - jsonPath: .spec.clusterIP
+    name: Cluster IP
+    type: string
+  - jsonPath: .spec.ports[*].port
+    name: Ports
+    type: integer[]
+  - jsonPath: .metadata.creationTimestamp
+    name: Age
+    type: date
+  id: default-/v1/services

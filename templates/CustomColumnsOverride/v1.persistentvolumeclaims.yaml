@@ -1,0 +1,29 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomColumnsOverride
+metadata:
+  name: v1.persistentvolumeclaims
+spec:
+  additionalPrinterColumns:
+  - jsonPath: .metadata.name
+    name: Name
+    type: string
+  - jsonPath: .status.phase
+    name: Status
+    type: string
+  - jsonPath: .spec.volumeName
+    name: Volume
+    type: string
+  - jsonPath: .spec.resources.requests.storage
+    name: Size
+    type: string
+  - jsonPath: .spec.accessModes[0]
+    name: Access mode
+    type: string
+  - jsonPath: .spec.storageClassName
+    name: Storage class
+    type: string
+  - jsonPath: .metadata.creationTimestamp
+    name: Age
+    type: date
+  id: default-/v1/persistentvolumeclaims

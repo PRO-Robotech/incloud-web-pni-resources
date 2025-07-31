@@ -1,0 +1,20 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomColumnsOverride
+metadata:
+  name: networking.istio.io.v1.virtualservices
+spec:
+  additionalPrinterColumns:
+  - jsonPath: .metadata.name
+    name: name
+    type: string
+  - jsonPath: .spec.gateways[0]
+    name: gateway
+    type: string
+  - jsonPath: .spec.hosts[0]
+    name: hostname
+    type: string
+  - jsonPath: .spec.http[0].route[0].destination.host
+    name: service
+    type: string
+  id: default-/networking.istio.io/v1/virtualservices

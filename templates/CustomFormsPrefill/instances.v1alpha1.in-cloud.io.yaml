@@ -1,0 +1,16 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomFormsPrefill
+metadata:
+name: instances.v1alpha1.in-cloud.io
+spec:
+  customizationId: default-/in-cloud.io/v1alpha1/instances
+  values:
+  - path:
+    - metadata
+    - name
+    value: example
+  - path:
+    - spec
+    - description
+    value: Описание проекта

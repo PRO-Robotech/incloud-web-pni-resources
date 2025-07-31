@@ -1,0 +1,49 @@
+---
+apiVersion: v1
+kind: List
+metadata:
+items:
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: BreadcrumbInside
+    metadata:
+      name: inside-cluster-apis
+    spec:
+      id: "inside-cluster-apis"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: "In-Cloud: inside"
+        link: "/openapi-ui/inside"
+      - key: cluster
+        label: "{clusterName}"
+
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: BreadcrumbInside
+    metadata:
+      name: inside-cluster-crd-by-api
+    spec:
+      id: "inside-cluster-crd-by-api"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: "In-Cloud: inside"
+        link: "/openapi-ui/inside"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/inside/{clusterName}/apis"
+      - key: crds-by-api
+        label: "CRDs by API: {apiGroup}/{apiVersion}"
+
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: BreadcrumbInside
+    metadata:
+      name: inside-cluster-api-by-api
+    spec:
+      id: "inside-cluster-api-by-api"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: "In-Cloud: inside"
+        link: "/openapi-ui/inside"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/inside/{clusterName}/apis"
+      - key: apis-by-api
+        label: "APIs by API: {apiGroup}/{apiVersion}"

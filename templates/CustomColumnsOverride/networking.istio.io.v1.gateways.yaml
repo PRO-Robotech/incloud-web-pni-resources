@@ -1,0 +1,14 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomColumnsOverride
+metadata:
+  name: networking.istio.io.v1.gateways
+spec:
+  additionalPrinterColumns:
+  - jsonPath: .metadata.name
+    name: name
+    type: string
+  - jsonPath: .metadata.creationTimestamp
+    name: Age
+    type: date
+  id: default-/networking.istio.io/v1/gateways

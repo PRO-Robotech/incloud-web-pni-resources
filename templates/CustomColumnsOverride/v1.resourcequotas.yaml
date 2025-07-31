@@ -1,0 +1,26 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomColumnsOverride
+metadata:
+  name: v1.resourcequotas
+spec:
+  additionalPrinterColumns:
+  - jsonPath: .metadata.name
+    name: Name
+    type: string
+  - jsonPath: .spec.hard["limits.cpu"]
+    name: Updated
+    type: string
+  - jsonPath: .spec.hard["requests.cpu"]
+    name: Updated
+    type: string
+  - jsonPath: .spec.hard["limits.memory"]
+    name: Updated
+    type: string
+  - jsonPath: .spec.hard["requests.memory"]
+    name: Updated
+    type: string
+  - jsonPath: .status.used["requests.memory"]
+    name: Used Memory
+    type: string
+  id: default-/v1/resourcequotas

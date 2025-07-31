@@ -1,0 +1,97 @@
+---
+apiVersion: v1
+kind: List
+metadata:
+items:
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: Breadcrumb
+    metadata:
+      name: stock-instance-crd-table
+    spec:
+      id: "stock-instance-crd-table"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: In-Cloud
+        link: "/openapi-ui"
+      - key: clusterList
+        label: "Cluster List"
+        link: "/openapi-ui/clusters"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: projects
+        label: "Projects"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: project
+        label: "{syntheticProject}"
+        link: "/openapi-ui/clusters/{clusterName}/projects/{syntheticProject}"
+      - key: instances
+        label: "Instances"
+        link: "/openapi-ui/{clusterName}/{syntheticProject}/api-table/in-cloud.io/v1alpha1/instances"
+      - key: instance
+        label: "{namespace}"
+        link: "/openapi-ui/{clusterName}/{namespace}/{syntheticProject}/api-table/netguard.sgroups.io/v1alpha1/services"
+      - key: crd
+        label: "{crdName}"
+
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: Breadcrumb
+    metadata:
+      name: stock-instance-crd-form
+    spec:
+      id: "stock-instance-crd-form"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: In-Cloud
+        link: "/openapi-ui"
+      - key: clusterList
+        label: "Cluster List"
+        link: "/openapi-ui/clusters"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: projects
+        label: "Projects"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: project
+        label: "{syntheticProject}"
+        link: "/openapi-ui/clusters/{clusterName}/projects/{syntheticProject}"
+      - key: instances
+        label: "Instances"
+        link: "/openapi-ui/{clusterName}/{syntheticProject}/api-table/in-cloud.io/v1alpha1/instances"
+      - key: instance
+        label: "{namespace}"
+        link: "/openapi-ui/{clusterName}/{namespace}/{syntheticProject}/api-table/netguard.sgroups.io/v1alpha1/services"
+      - key: create-crd-res-namespaced-table
+        label: "{typeName}"
+        link: "/openapi-ui/{clusterName}/{namespace}/{syntheticProject}/crd-table/{apiGroup}/{apiVersion}/v1/{typeName}.{apiGroup}"
+      - key: create-crd-res-namespaced-typename
+        label: Create6
+
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: Breadcrumb
+    metadata:
+      name: stock-instance-crd-form-edit
+    spec:
+      id: "stock-instance-crd-form-edit"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: In-Cloud
+        link: "/openapi-ui"
+      - key: clusterList
+        label: "Cluster List"
+        link: "/openapi-ui/clusters"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: projects
+        label: "Projects"
+        link: "/openapi-ui/clusters/{clusterName}"
+      - key: project
+        label: "{namespace}"
+        link: "/openapi-ui/clusters/{clusterName}/projects/{namespace}"
+      - key: create-crd-res-namespaced-table
+        label: "{typeName}"
+        link: "/openapi-ui/{clusterName}/{namespace}/crd-table/{apiGroup}/{apiVersion}/v1/{typeName}.{apiGroup}"
+      - key: create-crd-res-namespaced-typename
+        label: Update5 {entryName}

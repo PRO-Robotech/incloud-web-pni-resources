@@ -1,0 +1,58 @@
+---
+apiVersion: v1
+kind: List
+metadata:
+items:
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: BreadcrumbInside
+    metadata:
+      name: inside-cluster-crd-table
+    spec:
+      id: "inside-cluster-crd-table"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: "In-Cloud: inside"
+        link: "/openapi-ui/inside"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/inside/{clusterName}/apis"
+      - key: crd
+        label: "{crdName}"
+
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: BreadcrumbInside
+    metadata:
+      name: inside-cluster-crd-form
+    spec:
+      id: "inside-cluster-crd-form"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: "In-Cloud: inside"
+        link: "/openapi-ui/inside"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/inside/{clusterName}/apis"
+      - key: create-crd-res-namespaced-table
+        label: "{typeName}"
+        link: "/openapi-ui/inside/{clusterName}/crd-table/{apiGroup}/{apiVersion}/v1/{typeName}.{apiGroup}"
+      - key: create-crd-res-typename
+        label: Create
+
+  - apiVersion: front.in-cloud.io/v1alpha1
+    kind: BreadcrumbInside
+    metadata:
+      name: inside-cluster-crd-form-edit
+    spec:
+      id: "inside-cluster-crd-form-edit"
+      breadcrumbItems:
+      - key: In-Cloud
+        label: "In-Cloud: inside"
+        link: "/openapi-ui/inside"
+      - key: cluster
+        label: "{clusterName}"
+        link: "/openapi-ui/inside/{clusterName}/apis"
+      - key: create-crd-res-namespaced-table
+        label: "{typeName}"
+        link: "/openapi-ui/inside/{clusterName}/crd-table/{apiGroup}/{apiVersion}/v1/{typeName}.{apiGroup}"
+      - key: create-crd-res-typename
+        label: Update {entryName}

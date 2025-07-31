@@ -1,0 +1,52 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: CustomFormsPrefill
+metadata:
+name: projects.v1alpha1.front.in-cloud.io
+spec:
+  customizationId: default-/in-cloud.io/v1alpha1/projects
+  values:
+  - path:
+    - metadata
+    - name
+    value: example
+  - path:
+    - spec
+    - businessName
+    value: Бизнес наименование
+  - path:
+    - spec
+    - description
+    value: Описание проекта
+  - path:
+    - spec
+    - prefix
+    value: Короткое бизнес наименование
+  - path:
+    - spec
+    - quotas
+    - k8s
+    - limits
+    - memory
+    value: 0
+  - path:
+    - spec
+    - quotas
+    - k8s
+    - requests
+    - memory
+    value: 0
+  - path:
+    - spec
+    - quotas
+    - k8s
+    - limits
+    - cpu
+    value: 0
+  - path:
+    - spec
+    - quotas
+    - k8s
+    - requests
+    - cpu
+    value: 0

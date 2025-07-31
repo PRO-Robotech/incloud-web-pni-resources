@@ -1,0 +1,139 @@
+---
+apiVersion: front.in-cloud.io/v1alpha1
+kind: Factory
+metadata:
+  name: project
+spec:
+  key: project
+  urlsToFetch:
+    - "/api/clusters/{2}/k8s/apis/in-cloud.io/v1alpha1/projects/{6}"
+  data:
+    - type: antdRow
+      data:
+        id: 1
+        gutter: [24, 24]
+        style:
+          flexGrow: 1
+      children:
+        - type: antdCol
+          data:
+            id: 2
+            span: 16
+          children:
+            - type: ContentCard
+              data:
+                id: 21
+                title: "🚀 Project Dashboard"
+                style:
+                  flexGrow: 1
+              children:
+                - type: ProjectInfoCard
+                  data:
+                    id: 211
+                    clusterNamePartOfUrl: "{2}"
+                    namespacePartOfUrl: "{6}"
+                    baseApiGroup: front.in-cloud.io
+                    baseApiVersion: v1alpha1
+                    baseProjectApiGroup: {{ .Values.projectResource.apiGroup }}
+                    baseProjectVersion: {{ .Values.projectResource.apiVersion }}
+                    projectResourceName: {{ .Values.projectResource.resourceName }}
+                    mpResourceName: marketplacepanels
+                    baseprefix: openapi-ui
+                    accessGroups:
+                      - foo
+                      - bar          
+                  children:
+                    - type: Spacer
+                      data:
+                        id: 2113
+                        "$space": 24
+                        "$samespace": true
+
+                    - type: parsedText
+                      data:
+                        id: 2112
+                        text: "{reqs[0]['spec', 'description']}"
+
+                    - type: Spacer
+                      data:
+                        id: 2114
+                        "$space": 24
+                        "$samespace": true
+
+                    - type: antdFlex
+                      data:
+                        id: 2115
+                        vertical: true
+                        gap: 18
+                      children:
+                        - type: antdText
+                          children:
+                          data:
+                            id: 21151
+                            type: secondary
+                            strong: true
+                            style:
+                              fontSize: 16
+                              color: "#8c8c8c"
+                            text: "🛠 Developer Toolkit"
+
+                        - type: antdFlex
+                          data:
+                            id: 21152
+                            wrap: true
+                            gap: 12
+                          children:
+                            - type: antdButton
+                              data:
+                                id: 211521
+                                text: "Documentation"
+                                type: primary
+                                href: "https://docs.dobry-kot.ru"
+                                icon: ""
+
+                            - type: antdButton
+                              data:
+                                id: 211522
+                                text: "Argocd"
+                                type: default
+                                href: "/logs"
+                                icon: ""
+
+                            - type: antdButton
+                              data:
+                                id: 211523
+                                text: "Vault"
+                                type: dashed
+                                href: "/shell"
+                                icon: ""
+
+                            - type: antdButton
+                              data:
+                                id: 211523
+                                text: "Nexus"
+                                type: dashed
+                                href: "/shell"
+                                icon: ""
+
+        - type: antdCol
+          data:
+            id: 3
+            span: 8
+          children:
+            - type: ContentCard
+              data:
+                id: 31
+                title: "🧩 Marketplace"
+                style:
+                  flexGrow: 1
+              children:
+                - type: MarketplaceCard
+                  data:
+                    id: 311
+                    clusterNamePartOfUrl: "{2}"
+                    namespacePartOfUrl: "{6}"
+                    baseApiGroup: front.in-cloud.io
+                    baseApiVersion: v1alpha1
+                    mpResourceName: marketplacepanels
+                    mpResourceKind: MarketplacePanel
+                    baseprefix: openapi-ui
